@@ -3,4 +3,4 @@ numpy
 pandas
 streamlit==0.82.0
 pandas_profiling==3.0.0
-xlrd
+openpyxl
