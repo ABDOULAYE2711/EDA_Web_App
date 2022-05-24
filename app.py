@@ -49,4 +49,5 @@ else:
         st.write('---')
         st.header('**Pandas Profiling Report**')
         st_profile_report(pr)
+        
 
