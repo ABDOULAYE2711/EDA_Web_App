@@ -14,7 +14,7 @@ This is the **EDA App** created in streamlit using **pandas_profiling** library
 
 #Upload CSV data
 with st.sidebar.header('1. Upload your excel data'):
-    uploaded_file = st.sidebar.file_uploader("Upload your input excel")
+    uploaded_file = st.sidebar.file_uploader("Upload your input csv")
     st.sidebar.markdown("""
     [ABDOULAYE BADJI ]
     """)
@@ -23,7 +23,7 @@ with st.sidebar.header('1. Upload your excel data'):
 if uploaded_file is not None:
     @st.cache
     def load_excel():
-        excel = pd.read_csv(uploaded_file)
+        excel = pd.read_csv(uploaded_file,encoding='utf-8')
         return excel
     df = load_excel()
     pr=ProfileReport(df, explorative=True)
