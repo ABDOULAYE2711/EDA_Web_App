@@ -23,7 +23,7 @@ with st.sidebar.header('1. Upload your excel data'):
 if uploaded_file is not None:
     @st.cache
     def load_excel():
-        excel = pd.read_excel(uploaded_file)
+        excel = pd.read_excel(uploaded_file, engine='openpyxl')
         return excel
     df = load_excel()
     pr=ProfileReport(df, explorative=True)
